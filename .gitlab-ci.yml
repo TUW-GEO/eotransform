@@ -1,0 +1,8 @@
+stages:
+  - test
+
+test:
+  image: swamydev/geo-base:latest
+  script:
+    - make test
+  coverage: '/^TOTAL.+?(\d+\%)$/'
