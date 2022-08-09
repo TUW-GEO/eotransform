@@ -40,7 +40,7 @@ test: .install.test.done
 	pytest --verbose --color=yes --cov=eotransform --cov-report term-missing --doctest-modules
 
 version:
-	echo "__version__ = \"$(shell git describe)\"" > src/eotransform/_version.py
+	echo "__version__ = \"$(shell python git_version_to_pep440.py $(shell git describe --always))\"" > src/eotransform/_version.py
 
 dist: version
 	pip install build twine
