@@ -9,6 +9,8 @@ help:
 	@echo " run all tests and coverage"
 	@echo "make version"
 	@echo " update _version.py with current version tag"
+	@echo "make dist"
+	@echo " build the package ready for distribution and update the version tag"
 
 clean:
 	find . -name '*.pyc' -exec rm --force {} +
@@ -39,3 +41,7 @@ test: .install.test.done
 
 version:
 	echo "__version__ = \"$(shell git describe)\"" > src/eotransform/_version.py
+
+dist: version
+	pip install build twine
+	python -m build
