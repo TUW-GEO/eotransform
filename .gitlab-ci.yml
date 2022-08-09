@@ -6,3 +6,5 @@ test:
   script:
     - make test
   coverage: '/^TOTAL.+?(\d+\%)$/'
+  tags:
+    - linux
