@@ -12,7 +12,7 @@ class ResultTransformation(Transformer[Result[T, E], Result[T, E]], ABC):
     ...
 
 
-class MapOnOkResult(ResultTransformation):
+class ApplyToOkResult(ResultTransformation):
     def __init__(self, transformation):
         self._transformation = transformation
 
