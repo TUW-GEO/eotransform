@@ -63,7 +63,7 @@ class ProcessStub(Transformer):
 
 
 class SinkStub(Sink):
-    def __init__(self, operation_time, raises_error_at):
+    def __init__(self, operation_time=0, raises_error_at=None):
         self._operation_time = operation_time
         self._raises_error_at = raises_error_at or {}
         self._i = 0
@@ -75,7 +75,7 @@ class SinkStub(Sink):
 
 
 class SinkSpy(SinkStub):
-    def __init__(self, operation_time, raises_error_at):
+    def __init__(self, operation_time=0, raises_error_at=None):
         super().__init__(operation_time, raises_error_at)
         self.received_values = []
 
