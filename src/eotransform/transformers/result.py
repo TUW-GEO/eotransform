@@ -20,3 +20,8 @@ class ApplyToOkResult(ResultTransformation):
         if x.is_error():
             return x
         return Result.ok(self._transformation(x.unwrap()))
+
+
+class Unwrap(ResultTransformation):
+    def __call__(self, x: Result[T, E]) -> T:
+        return x.unwrap()

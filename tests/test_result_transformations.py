@@ -1,7 +1,7 @@
 import pytest
 
 from eotransform.result import Result
-from eotransform.transformers.result import ApplyToOkResult
+from eotransform.transformers.result import ApplyToOkResult, Unwrap
 
 
 def test_apply_to_ok_result_transforms_ok_result():
@@ -17,3 +17,9 @@ def test_apply_to_ok_result_hands_through_error_without_applying_any_transformat
     x = ApplyToOkResult(a_transform)(x)
     with pytest.raises(AssertionError):
         x.unwrap()
+
+
+def test_unwrap_result():
+    assert Unwrap()(Result.ok(42)) == 42
+    with pytest.raises(AssertionError):
+        Unwrap()(Result.error(AssertionError("an error occured")))
