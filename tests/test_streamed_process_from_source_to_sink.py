@@ -3,10 +3,11 @@ from concurrent.futures import ThreadPoolExecutor
 import pytest
 
 from eotransform.streamed_process import streamed_process
+from eotransform.utilities.profiling import PerformanceClock
 
 from doubles import AssertIntStream, SourceStub, ProcessStub, SinkSpy
 from trivial_implementations import Add
-from utils import PerformanceClock
+
 
 EPSILON = 1 / 32
 
