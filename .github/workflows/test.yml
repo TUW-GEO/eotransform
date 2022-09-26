@@ -24,7 +24,7 @@ jobs:
           python -m pip install -e .[test]
 
       - name: Test
-        run: pytest --verbose --color=yes --cov=eotransform --cov-report term-missing --doctest-modules
+        run: pytest --verbose --color=yes --cov=eotransform --cov-report term-missing --doctest-modules --slow
       - name: Coverage comment
         id: coverage_comment
         uses: py-cov-action/python-coverage-comment-action@v3

@@ -16,8 +16,8 @@ class ATransformerThatTakes(Transformer):
         return x
 
 
-def test_clock_runtime_performance_of_transform():
+def test_clock_runtime_performance_of_transform(slow_factor):
     clock = PerformanceClock()
-    transform = WithPerformanceClock(ATransformerThatTakes(seconds=0.1), clock)
+    transform = WithPerformanceClock(ATransformerThatTakes(seconds=0.1 * slow_factor), clock)
     transform(0)
-    assert clock.total_measures == approx(0.1, abs=0.01)
+    assert clock.total_measures == approx(0.1 * slow_factor, abs=0.01 * slow_factor)

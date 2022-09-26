@@ -16,8 +16,8 @@ class ASinkThatTakes(Sink):
         return x
 
 
-def test_clock_runtime_performance_of_sink():
+def test_clock_runtime_performance_of_sink(slow_factor):
     clock = PerformanceClock()
-    transform = WithPerformanceClock(ASinkThatTakes(seconds=0.1), clock)
+    transform = WithPerformanceClock(ASinkThatTakes(seconds=0.1 * slow_factor), clock)
     transform(0)
-    assert clock.total_measures == approx(0.1, abs=0.01)
+    assert clock.total_measures == approx(0.1 * slow_factor, abs=0.01 * slow_factor)

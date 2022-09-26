@@ -2,12 +2,10 @@ from concurrent.futures import ThreadPoolExecutor
 
 import pytest
 
+from doubles import AssertIntStream, SourceStub, ProcessStub, SinkSpy
 from eotransform.streamed_process import streamed_process
 from eotransform.utilities.profiling import PerformanceClock
-
-from doubles import AssertIntStream, SourceStub, ProcessStub, SinkSpy
 from trivial_implementations import Add
-
 
 EPSILON = 1 / 32
 
@@ -24,22 +22,22 @@ def test_process_source_and_put_in_sink(executor):
     out_sink.assert_all_visited()
 
 
-def test_interleave_processing_and_sour_and_sink_operations(executor):
+def test_interleave_processing_and_sour_and_sink_operations(executor, slow_factor):
     """
     Testing interleaving INput IO, PRocess and OuTput IO:
     IN->IN->IN
       ->PR->PR->PR
           ->OT->OT->OT
     """
-    source = make_io_source(n=3, operation_time=1 / 16)
-    process = make_process(operation_time=1 / 16)
-    sink = make_io_sink(operation_time=1 / 16)
+    source = make_io_source(n=3, operation_time=(1 / 16) * slow_factor)
+    process = make_process(operation_time=(1 / 16) * slow_factor)
+    sink = make_io_sink(operation_time=(1 / 16) * slow_factor)
 
     streamed_process_clock = PerformanceClock()
     with streamed_process_clock.measure():
         streamed_process(source, process, sink, executor)
 
-    assert streamed_process_clock.mean_measures < 5 / 16 + EPSILON
+    assert streamed_process_clock.mean_measures < (5 / 16 + EPSILON) * slow_factor
 
 
 def make_io_source(n, operation_time=0.0, raises_error_at=None):
