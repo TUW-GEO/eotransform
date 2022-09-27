@@ -26,7 +26,7 @@ def test_measure_scope(clock, slow_factor):
     with clock.measure():
         time.sleep(0.01 * slow_factor)
 
-    assert clock.mean_measures == approx(0.01 * slow_factor, abs=0.001 * slow_factor)
+    assert clock.mean_measures == approx(0.01 * slow_factor, abs=0.009 * slow_factor)
 
 
 def test_measure_multiple_scopes_and_provide_mean(clock, slow_factor):
