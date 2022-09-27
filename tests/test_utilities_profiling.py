@@ -55,10 +55,8 @@ def test_total_measures(clock, slow_factor):
     for _ in range(5):
         with clock.measure():
             time.sleep(0.01 * slow_factor)
-        with clock.measure():
-            time.sleep(0.03 * slow_factor)
 
-    assert clock.total_measures == approx(0.04 * 5 * slow_factor, abs=0.01 * slow_factor)
+    assert clock.drop_first().total_measures == approx(0.04 * slow_factor, abs=0.01 * slow_factor)
 
 
 def test_clock_can_have_a_name():
