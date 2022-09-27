@@ -13,13 +13,17 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.x'
-      - name: Update version
-        run: make version-release
+      - name: Determine version from git tag
+        id: version
+        run: echo ::set-output name=tag::${GITHUB_REF#refs/*/}
+      - name: set version
+        run: |
+          echo "__version__ = \"${{ steps.version.outputs.tag }}\"" > src/eotransform/_version.py
       - name: Push changes
         run: |
             git config --local user.email "action@github.com"
             git config --local user.name "GitHub Action"
-            git commit -m "Update version tag" -a  || echo "nothing to commit"
+            git commit -m "e  update version tag: ${{ steps.version.outputs.tag }}" -a  || echo "nothing to commit"
             git checkout -b temp
             git fetch
             git checkout main
