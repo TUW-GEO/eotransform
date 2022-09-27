@@ -39,7 +39,10 @@ setup: .install.done
 test: .install.test.done
 	pytest --verbose --color=yes --cov=eotransform --cov-report term-missing --doctest-modules
 
-dist:
+version:
+	echo "__version__ = \"$(shell git describe --always --tags --abbrev=0)\"" > src/eotransform/_version.py
+
+dist: version
 	pip3 install build twine
 	python3 -m build
 
