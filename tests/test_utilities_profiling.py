@@ -23,19 +23,17 @@ def set_logging_active():
 
 
 def test_measure_scope(clock, slow_factor):
-    for _ in range(5):
-        with clock.measure():
-            time.sleep(0.01 * slow_factor)
+    with clock.measure():
+        time.sleep(0.01 * slow_factor)
 
     assert clock.mean_measures == approx(0.01 * slow_factor, abs=0.009 * slow_factor)
 
 
 def test_measure_multiple_scopes_and_provide_mean(clock, slow_factor):
-    for _ in range(5):
-        with clock.measure():
-            time.sleep(0.01 * slow_factor)
-        with clock.measure():
-            time.sleep(0.03 * slow_factor)
+    with clock.measure():
+        time.sleep(0.01 * slow_factor)
+    with clock.measure():
+        time.sleep(0.03 * slow_factor)
 
     assert clock.mean_measures == approx(0.02 * slow_factor, abs=0.005 * slow_factor)
 
@@ -44,9 +42,8 @@ def test_drop_first(clock, slow_factor):
     with clock.measure():
         time.sleep(0.05 * slow_factor)
 
-    for _ in range(5):
-        with clock.measure():
-            time.sleep(0.01 * slow_factor)
+    with clock.measure():
+        time.sleep(0.01 * slow_factor)
 
     assert clock.drop_first().mean_measures == approx(0.01 * slow_factor, abs=0.005 * slow_factor)
 
@@ -56,7 +53,7 @@ def test_total_measures(clock, slow_factor):
         with clock.measure():
             time.sleep(0.01 * slow_factor)
 
-    assert clock.drop_first().total_measures == approx(0.04 * slow_factor, abs=0.01 * slow_factor)
+    assert clock.total_measures == approx(0.05 * slow_factor, abs=0.01 * slow_factor)
 
 
 def test_clock_can_have_a_name():

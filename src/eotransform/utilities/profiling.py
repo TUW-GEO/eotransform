@@ -6,7 +6,7 @@ from functools import wraps
 from typing import Optional
 
 PERFORMANCE_LOG_ENV_VAR = 'CORRELATION_MAP_PERFORMANCE_LOG'
-
+NANOSECONDS_PER_SECOND = 1e9
 
 class PerformanceClock:
     def __init__(self, name: Optional[str] = ""):
@@ -19,9 +19,9 @@ class PerformanceClock:
 
     @contextmanager
     def measure(self):
-        start = time.time()
+        start = time.perf_counter_ns()
         yield
-        self._measures.append(time.time() - start)
+        self._measures.append((time.perf_counter_ns() - start) / NANOSECONDS_PER_SECOND)
 
     @property
     def total_measures(self):
