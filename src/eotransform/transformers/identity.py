@@ -1,6 +1,6 @@
 from typing import TypeVar
 
-from protocol.transformer import Transformer
+from eotransform.protocol.transformer import Transformer
 
 IdentityT = TypeVar('IdentityT')
 
@@ -11,5 +11,6 @@ class Identity(Transformer[IdentityT, IdentityT]):
     >>> Identity()(42)
     42
     """
+
     def __call__(self, x: IdentityT) -> IdentityT:
         return x
