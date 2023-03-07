@@ -1,5 +1,10 @@
 from abc import abstractmethod
-from typing import Any, Optional, Protocol
+from typing import Any, Optional
+
+try:
+    from typing import Protocol
+except ImportError:
+    from typing_extensions import Protocol
 
 from eotransform.protocol.sink import Sink
 
