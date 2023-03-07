@@ -15,7 +15,7 @@
 | src/eotransform/sinks/\_\_init\_\_.py                    |        0 |        0 |        0 |        0 |    100% |           |
 | src/eotransform/sinks/filtered.py                        |        9 |        0 |        2 |        0 |    100% |           |
 | src/eotransform/sinks/result.py                          |       12 |        0 |        2 |        0 |    100% |           |
-| src/eotransform/sinks/sink\_to\_progress\_report.py      |        9 |        0 |        0 |        0 |    100% |           |
+| src/eotransform/sinks/sink\_to\_progress\_report.py      |       13 |        2 |        0 |        0 |     85% |       6-7 |
 | src/eotransform/sinks/with\_performance\_clock.py        |       11 |        0 |        2 |        1 |     92% |  15->exit |
 | src/eotransform/streamed\_process.py                     |       67 |        1 |       16 |        0 |     99% |        23 |
 | src/eotransform/transformers/\_\_init\_\_.py             |        0 |        0 |        0 |        0 |    100% |           |
@@ -30,7 +30,7 @@
 | src/eotransform/transformers/with\_performance\_clock.py |       12 |        0 |        2 |        1 |     93% |  16->exit |
 | src/eotransform/utilities/\_\_init\_\_.py                |        0 |        0 |        0 |        0 |    100% |           |
 | src/eotransform/utilities/profiling.py                   |       58 |        1 |       10 |        2 |     96% |70, 72->75 |
-|                                                **TOTAL** |  **329** |    **2** |   **62** |    **5** | **98%** |           |
+|                                                **TOTAL** |  **333** |    **4** |   **62** |    **5** | **98%** |           |
 
 
 ## Setup coverage badge
