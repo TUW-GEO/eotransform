@@ -10,6 +10,7 @@
 | src/eotransform/collection\_transformation.py            |       18 |        0 |       16 |        1 |     97% |  13->exit |
 | src/eotransform/protocol/\_\_init\_\_.py                 |        0 |        0 |        0 |        0 |    100% |           |
 | src/eotransform/protocol/sink.py                         |        4 |        0 |        0 |        0 |    100% |           |
+| src/eotransform/protocol/stream.py                       |        4 |        0 |        0 |        0 |    100% |           |
 | src/eotransform/protocol/transformer.py                  |        9 |        0 |        0 |        0 |    100% |           |
 | src/eotransform/result.py                                |       31 |        0 |        4 |        0 |    100% |           |
 | src/eotransform/sinks/\_\_init\_\_.py                    |        0 |        0 |        0 |        0 |    100% |           |
@@ -26,11 +27,12 @@
 | src/eotransform/transformers/map.py                      |        9 |        0 |        0 |        0 |    100% |           |
 | src/eotransform/transformers/repeat.py                   |        9 |        0 |        0 |        0 |    100% |           |
 | src/eotransform/transformers/result.py                   |       18 |        0 |        2 |        0 |    100% |           |
+| src/eotransform/transformers/send\_to\_stream.py         |       10 |        0 |        0 |        0 |    100% |           |
 | src/eotransform/transformers/to\_tuple.py                |        6 |        0 |        0 |        0 |    100% |           |
 | src/eotransform/transformers/with\_performance\_clock.py |       12 |        0 |        2 |        1 |     93% |  16->exit |
 | src/eotransform/utilities/\_\_init\_\_.py                |        0 |        0 |        0 |        0 |    100% |           |
 | src/eotransform/utilities/profiling.py                   |       58 |        1 |       10 |        2 |     96% |70, 72->75 |
-|                                                **TOTAL** |  **333** |    **4** |   **62** |    **5** | **98%** |           |
+|                                                **TOTAL** |  **347** |    **4** |   **62** |    **5** | **98%** |           |
 
 
 ## Setup coverage badge
