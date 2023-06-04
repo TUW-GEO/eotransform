@@ -1,4 +1,4 @@
-![Coverage badge](https://raw.githubusercontent.com/TUW-GEO/eotransform/python-coverage-comment-action-data/badge.svg)
+![Coverage badge](https://raw.githubusercontent.com/TUW-GEO/eotransform/python-coverage-comment-action-data/badge.svg) [![Documentation Status](https://readthedocs.org/projects/eotransform/badge/?version=latest)](https://eotransform.readthedocs.io/en/latest/?badge=latest)
 # eotransform
 
 Defines the basic transform protocol to be used in the streamed source to sink concept. Also provides some generic 
@@ -92,7 +92,12 @@ Often an easy way to increase throughput, is to interleave the I/O or data fetch
 
 With this streaming process you can utilise resources more effectively.
 
-## Dependencies
+## Support & Documentation
+
+- [Documentation](https://eotransform.readthedocs.io/)
+- GitHub: [https://github.com/TUW-GEO/eotransform](https://github.com/TUW-GEO/eotransform)
+
+### Dependencies
 eotransform requires Python 3.8 and has these dependencies:
 
 <!-- snippet: dependencies -->
