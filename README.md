@@ -81,14 +81,14 @@ The following briefly describes the concept of streaming, and how it can be used
 
 The most straightforward way to process data is to first load it and then process it:
 
-![serial process](doc/images/serial.png)
+![serial process](docs/_static/images/serial.png)
 
 This has the advantage of being simple to implement and maintain, as you don't need to be concerned with issues of parallelism.
 
 For many cases this will work sufficiently well, however, it can stall your processing pipeline because it needs to wait for data to be fetched.
 Often an easy way to increase throughput, is to interleave the I/O or data fetching with processing chunks:
 
-![streamed process](doc/images/streamed.png)
+![streamed process](docs/_static/images/streamed.png)
 
 With this streaming process you can utilise resources more effectively.
 

@@ -80,7 +80,7 @@ class Result(Generic[T, E]):
         42
         >>> Result.error(RuntimeError("Something bad has happened")).unwrap()
         Traceback (most recent call last):
-          ...
+        ...
         RuntimeError: Something bad has happened
         """
         if self.is_error():
