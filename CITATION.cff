@@ -29,6 +29,6 @@ keywords:
   - streaming
   - data pipeline
 license: MIT
-commit: e06e3d2
-version: 1.8.1
+commit: 9f93a95
+version: 1.8.2
 date-released: '2023-06-04'
