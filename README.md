@@ -1,4 +1,4 @@
-![Coverage badge](https://raw.githubusercontent.com/TUW-GEO/eotransform/python-coverage-comment-action-data/badge.svg) [![Documentation Status](https://readthedocs.org/projects/eotransform/badge/?version=latest)](https://eotransform.readthedocs.io/en/latest/?badge=latest)
+![Coverage badge](https://raw.githubusercontent.com/TUW-GEO/eotransform/python-coverage-comment-action-data/badge.svg) [![Documentation Status](https://readthedocs.org/projects/eotransform/badge/?version=latest)](https://eotransform.readthedocs.io/en/latest/?badge=latest) [![DOI](https://zenodo.org/badge/541624588.svg)](https://zenodo.org/badge/latestdoi/541624588)
 # eotransform
 
 Defines the basic transform protocol to be used in the streamed source to sink concept. Also provides some generic 
@@ -107,3 +107,20 @@ more-itertools
 ```
 <sup><a href='/setup.cfg#L30-L32' title='Snippet source file'>snippet source</a> | <a href='#snippet-dependencies' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
+
+## Citation
+
+If you find this repository useful, please consider giving it a star or a citation:
+```bibtex
+@software{eotransform,
+  author       = {Raml, Bernhard},
+  title        = {{TUW-GEO/eotransform: Add README examples and API 
+                   documentation}},
+  month        = jun,
+  year         = 2023,
+  publisher    = {Zenodo},
+  version      = {1.8.1},
+  doi          = {10.5281/zenodo.8002714},
+  url          = {https://doi.org/10.5281/zenodo.8002714}
+}
+```

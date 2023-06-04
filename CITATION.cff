@@ -1,0 +1,34 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: eotransform
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Bernhard
+    family-names: Raml
+    email: bernhard.raml@geo.tuwien.ac.at
+    affiliation: TU Wien
+    orcid: 'https://orcid.org/0000-0002-5357-0344'
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.8002714
+    description: URL of version 1.8.1
+repository-code: 'https://github.com/TUW-GEO/eotransform'
+url: 'https://eotransform.readthedocs.io/'
+abstract: >-
+  Defines the basic transform protocol to be used in the
+  streamed source to sink concept. Also provides some
+  generic  transformer implementations such as Compose or
+  Result.
+keywords:
+  - earth obersvation
+  - streaming
+  - data pipeline
+license: MIT
+commit: e06e3d2
+version: 1.8.1
+date-released: '2023-06-04'
