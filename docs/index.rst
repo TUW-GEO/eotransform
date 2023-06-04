@@ -12,7 +12,7 @@ The eotransform package defines the basic transform protocol to be used in the s
 It also provides some generic transformer and sink implementations such as `Compose` or `Result`.
 
 By providing a common contract, it aims to facilitate modularisation of processing pipelines.
-The general concept of Source -> Transform -> Sink makes it easier to process data in a streamed fashion hiding I/O.
+The general concept of Source -> Transform -> Sink makes it easier to process data in a streamed fashion, hiding I/O.
 Have a look at the projects `README <https://github.com/TUW-GEO/eotransform/blob/main/README.md>`_ file for examples.
 
 Streaming
@@ -38,5 +38,6 @@ In that case, throughput can be increased by a streaming approach.
 
 Data block fetching is interleaved with processing, effectively hiding the I/O or other inherently serial processes such as compression/decompression.
 This, however, comes at the cost of increased complexity, as you need to worry about concurrency issues.
-eotransform provides you with a :doc:`streamed_process <_autosummary/eotransform.streamed_process.streamed_process>`, which takes care of most of the heavy lifting, like setting up producer and consumer queues, or passing exceptions across thread boundaries.
+eotransform provides you with a :doc:`streamed_process <_autosummary/eotransform.streamed_process.streamed_process>`, which takes care of most of the heavy lifting.
+This includes for instance, setting up producer and consumer queues, or passing exceptions across thread boundaries.
 The package also provides implementation for the Result pattern, inspired by `Rust's result type <https://doc.rust-lang.org/std/result/>`_, to provide a flexible mechanism for concurrent error handling.
