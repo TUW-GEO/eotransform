@@ -117,8 +117,6 @@ If you find this repository useful, please consider giving it a star or a citati
   title        = {eotransform},
   month        = jun,
   year         = 2023,
-  note         = {{If you use this software, please cite it using the 
-                   metadata from this file.}},
   publisher    = {Zenodo},
   version      = {1.8.2},
   doi          = {10.5281/zenodo.8002789},
