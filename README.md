@@ -112,15 +112,16 @@ more-itertools
 
 If you find this repository useful, please consider giving it a star or a citation:
 ```bibtex
-@software{eotransform,
+@software{raml_bernhard_2023_8002789,
   author       = {Raml, Bernhard},
-  title        = {{TUW-GEO/eotransform: Add README examples and API 
-                   documentation}},
+  title        = {eotransform},
   month        = jun,
   year         = 2023,
+  note         = {{If you use this software, please cite it using the 
+                   metadata from this file.}},
   publisher    = {Zenodo},
-  version      = {1.8.1},
-  doi          = {10.5281/zenodo.8002714},
-  url          = {https://doi.org/10.5281/zenodo.8002714}
+  version      = {1.8.2},
+  doi          = {10.5281/zenodo.8002789},
+  url          = {https://doi.org/10.5281/zenodo.8002789}
 }
 ```
