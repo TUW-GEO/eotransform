@@ -105,7 +105,7 @@ eotransform requires Python 3.8 and has these dependencies:
 ```cfg
 more-itertools
 ```
-<sup><a href='/setup.cfg#L30-L32' title='Snippet source file'>snippet source</a> | <a href='#snippet-dependencies' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/setup.cfg#L31-L33' title='Snippet source file'>snippet source</a> | <a href='#snippet-dependencies' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 ## Citation
