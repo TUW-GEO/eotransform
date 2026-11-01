@@ -38,14 +38,15 @@ class ReturnPipeStream(Iterable[ReturnPipeT]):
 
 
 def _producer(source: InSource, pipe: Queue, cancel_event: Event) -> None:
-    for elem in source:
-        if cancel_event.is_set():
-            return
-        else:
-            pipe.put(elem)
-
-    if not cancel_event.is_set():
-        pipe.put(StopIteration)
+    try:
+        for elem in source:
+            if cancel_event.is_set():
+                return
+            else:
+                pipe.put(elem)
+    finally:
+        if not cancel_event.is_set():
+            pipe.put(StopIteration)
 
 
 def _consumer(sink: OutSink, pipe: Queue) -> None:
@@ -77,11 +78,13 @@ def streamed_process(source: InSource, process: ProcessTransformer, dst_sink: Ou
     producer = executor.submit(_producer, source, source_pipe, cancel_production_event)
     consumer = executor.submit(_consumer, dst_sink, sink_pipe)
 
+    loading_timed_out = False
     try:
         for x in ReturnPipeStream(source_pipe, loading_timeout):
             sink_pipe.put(process(x), timeout=storing_timeout)
     except Empty:
-        ...
+        loading_timed_out = True
+        raise TimeoutError(f"loading an element exceeded loading_timeout of {loading_timeout}s") from None
     finally:
         cancel_production_event.set()
         try:
@@ -93,7 +96,8 @@ def streamed_process(source: InSource, process: ProcessTransformer, dst_sink: Ou
                 source_pipe.get_nowait()
                 source_pipe.task_done()
 
-            producer.result(timeout=loading_timeout)
+            if not loading_timed_out:
+                producer.result(timeout=loading_timeout)
             consumer.result(timeout=storing_timeout)
             _unsafe_pipe_clear(source_pipe)
             source_pipe.join()

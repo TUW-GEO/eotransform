@@ -1,4 +1,6 @@
+import time
 from concurrent.futures import ThreadPoolExecutor
+from typing import Iterable, Iterator
 
 import pytest
 
@@ -95,6 +97,40 @@ def test_sink_stores_last_successful_values_after_process_error(executor):
     except ProcessError:
         ...
     assert sink.received_values == [0, 1]
+
+
+LOADING_TIMEOUT = 0.25
+
+
+class SlowLoadSource(Iterable):
+    def __init__(self, n: int, slow_at: int, load_time: float) -> None:
+        self._n = n
+        self._slow_at = slow_at
+        self._load_time = load_time
+
+    def __iter__(self) -> Iterator:
+        for i in range(self._n):
+            if i == self._slow_at:
+                time.sleep(self._load_time)
+            yield i
+
+
+@pytest.mark.parametrize("timeouts", [1.5, 2.5])
+def test_load_exceeding_loading_timeout_is_reported_as_timeout(executor: ThreadPoolExecutor, timeouts: float) -> None:
+    slow_source = SlowLoadSource(n=4, slow_at=2, load_time=timeouts * LOADING_TIMEOUT)
+    with pytest.raises(TimeoutError, match="loading_timeout"):
+        streamed_process(slow_source, make_process(), make_io_sink(), executor, loading_timeout=LOADING_TIMEOUT)
+
+
+def test_load_failure_surfaces_without_waiting_for_loading_timeout(executor: ThreadPoolExecutor) -> None:
+    generous_timeout = 5.0
+    error_source = make_io_source(n=3, raises_error_at={1: SourceError("unreadable input")})
+
+    clock = PerformanceClock()
+    with clock.measure(), pytest.raises(SourceError):
+        streamed_process(error_source, make_process(), make_io_sink(), executor, loading_timeout=generous_timeout)
+
+    assert clock.mean_measures < generous_timeout / 10, "load failure waited for the loading timeout before surfacing"
 
 
 def test_sink_stores_last_successful_values_after_loading_error(executor):
