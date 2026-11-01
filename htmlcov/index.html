@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Coverage report</title>
-    <link rel="icon" sizes="32x32" href="favicon_32.png">
-    <link rel="stylesheet" href="style.css" type="text/css">
-    <script type="text/javascript" src="coverage_html.js" defer></script>
+    <link rel="icon" sizes="32x32" href="favicon_32_cb_c827f16f.png">
+    <link rel="stylesheet" href="style_cb_4667309f.css" type="text/css">
+    <script src="coverage_html_cb_54cfdca1.js" defer></script>
 </head>
 <body class="indexfile">
 <header>
@@ -16,13 +16,13 @@
         <aside id="help_panel_wrapper">
             <input id="help_panel_state" type="checkbox">
             <label for="help_panel_state">
-                <img id="keyboard_icon" src="keybd_closed.png" alt="Show/hide keyboard shortcuts" />
+                <img id="keyboard_icon" src="keybd_closed_cb_900cfef5.png" alt="Show/hide keyboard shortcuts">
             </label>
             <div id="help_panel">
                 <p class="legend">Shortcuts on this page</p>
                 <div class="keyhelp">
                     <p>
-                        <kbd>n</kbd>
+                        <kbd>f</kbd>
                         <kbd>s</kbd>
                         <kbd>m</kbd>
                         <kbd>x</kbd>
@@ -43,254 +43,402 @@
             </div>
         </aside>
         <form id="filter_container">
-            <input id="filter" type="text" value="" placeholder="filter..." />
+            <input id="filter" type="text" value="" placeholder="filter...">
+            <div>
+                <input id="hide100" type="checkbox" >
+                <label for="hide100">hide covered</label>
+            </div>
         </form>
+        <h2>
+                <a class="button current">Files</a>
+                <a class="button" href="function_index.html">Functions</a>
+                <a class="button" href="class_index.html">Classes</a>
+        </h2>
         <p class="text">
-            <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2023-06-04 09:29 +0000
+            <a class="nav" href="https://coverage.readthedocs.io/en/7.17.0">coverage.py v7.17.0</a>,
+            created at 2026-11-01 13:31 +0000
         </p>
     </div>
 </header>
 <main id="index">
     <table class="index" data-sortable>
         <thead>
+            <tr class="tablehead grouphead">
+                <th class="spacer">&nbsp;</th>
+                <th class="spacer">&nbsp;</th>
+                <th class="left" colspan="4">Statements</th>
+                <th class="spacer">&nbsp;</th>
+                <th class="left" colspan="3">Branches</th>
+                <th class="spacer">&nbsp;</th>
+                <th>Total</th>
+            </tr>
             <tr class="tablehead" title="Click to sort">
-                <th class="name left" aria-sort="none" data-shortcut="n">Module</th>
-                <th aria-sort="none" data-default-sort-order="descending" data-shortcut="s">statements</th>
-                <th aria-sort="none" data-default-sort-order="descending" data-shortcut="m">missing</th>
-                <th aria-sort="none" data-default-sort-order="descending" data-shortcut="x">excluded</th>
-                <th aria-sort="none" data-default-sort-order="descending" data-shortcut="b">branches</th>
-                <th aria-sort="none" data-default-sort-order="descending" data-shortcut="p">partial</th>
-                <th class="right" aria-sort="none" data-shortcut="c">coverage</th>
+                <th id="file" class="name" aria-sort="none" data-shortcut="f">File<span class="arrows"></span></th>
+                <th class="spacer">&nbsp;</th>
+                <th id="statements_coverage" aria-sort="none" data-default-sort-order="descending">coverage<span class="arrows"></span></th>
+                <th id="statements" aria-sort="none" data-default-sort-order="descending" data-shortcut="s">statements<span class="arrows"></span></th>
+                <th id="missing" aria-sort="none" data-default-sort-order="descending" data-shortcut="m">missing<span class="arrows"></span></th>
+                <th id="excluded" aria-sort="none" data-default-sort-order="descending" data-shortcut="x">excluded<span class="arrows"></span></th>
+                <th class="spacer">&nbsp;</th>
+                <th id="branches_coverage" aria-sort="none" data-default-sort-order="descending">coverage<span class="arrows"></span></th>
+                <th id="branches" aria-sort="none" data-default-sort-order="descending" data-shortcut="b">branches<span class="arrows"></span></th>
+                <th id="partial" aria-sort="none" data-default-sort-order="descending" data-shortcut="p">partial<span class="arrows"></span></th>
+                <th class="spacer">&nbsp;</th>
+                <th id="coverage" aria-sort="none" data-shortcut="c">coverage<span class="arrows"></span></th>
             </tr>
         </thead>
         <tbody>
-            <tr class="file">
-                <td class="name left"><a href="d_eaefafe56ffb7220___init___py.html">src/eotransform/__init__.py</a></td>
+            <tr class="region">
+                <td class="name"><a href="z_eaefafe56ffb7220___init___py.html">src<span class="sep">/</span>eotransform<span class="sep">/</span>__init__.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="1 1">100%</td>
                 <td>1</td>
                 <td>0</td>
                 <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
                 <td>0</td>
                 <td>0</td>
-                <td class="right" data-ratio="1 1">100%</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="1 1">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_eaefafe56ffb7220__version_py.html">src/eotransform/_version.py</a></td>
+            <tr class="region">
+                <td class="name"><a href="z_eaefafe56ffb7220__version_py.html">src<span class="sep">/</span>eotransform<span class="sep">/</span>_version.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="1 1">100%</td>
                 <td>1</td>
                 <td>0</td>
                 <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
                 <td>0</td>
                 <td>0</td>
-                <td class="right" data-ratio="1 1">100%</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="1 1">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_eaefafe56ffb7220_apply_py.html">src/eotransform/apply.py</a></td>
+            <tr class="region">
+                <td class="name"><a href="z_eaefafe56ffb7220_apply_py.html">src<span class="sep">/</span>eotransform<span class="sep">/</span>apply.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="9 9">100%</td>
                 <td>9</td>
                 <td>0</td>
                 <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
                 <td>0</td>
                 <td>0</td>
-                <td class="right" data-ratio="9 9">100%</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="9 9">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_eaefafe56ffb7220_collection_transformation_py.html">src/eotransform/collection_transformation.py</a></td>
+            <tr class="region">
+                <td class="name"><a href="z_eaefafe56ffb7220_collection_transformation_py.html">src<span class="sep">/</span>eotransform<span class="sep">/</span>collection_transformation.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="18 18">100%</td>
                 <td>18</td>
                 <td>0</td>
                 <td>0</td>
-                <td>16</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="9 10">90%</td>
+                <td>10</td>
                 <td>1</td>
-                <td class="right" data-ratio="33 34">97%</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="27 28">96%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_fd914b1cfdc7b9b2_sink_py.html">src/eotransform/protocol/sink.py</a></td>
+            <tr class="region">
+                <td class="name"><a href="z_fd914b1cfdc7b9b2_sink_py.html">src<span class="sep">/</span>eotransform<span class="sep">/</span>protocol<span class="sep">/</span>sink.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="4 4">100%</td>
                 <td>4</td>
                 <td>0</td>
                 <td>3</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
                 <td>0</td>
                 <td>0</td>
-                <td class="right" data-ratio="4 4">100%</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="4 4">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_fd914b1cfdc7b9b2_stream_py.html">src/eotransform/protocol/stream.py</a></td>
+            <tr class="region">
+                <td class="name"><a href="z_fd914b1cfdc7b9b2_stream_py.html">src<span class="sep">/</span>eotransform<span class="sep">/</span>protocol<span class="sep">/</span>stream.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="4 4">100%</td>
                 <td>4</td>
                 <td>0</td>
                 <td>3</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
                 <td>0</td>
                 <td>0</td>
-                <td class="right" data-ratio="4 4">100%</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="4 4">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_fd914b1cfdc7b9b2_transformer_py.html">src/eotransform/protocol/transformer.py</a></td>
+            <tr class="region">
+                <td class="name"><a href="z_fd914b1cfdc7b9b2_transformer_py.html">src<span class="sep">/</span>eotransform<span class="sep">/</span>protocol<span class="sep">/</span>transformer.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="9 9">100%</td>
                 <td>9</td>
                 <td>0</td>
                 <td>9</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
                 <td>0</td>
                 <td>0</td>
-                <td class="right" data-ratio="9 9">100%</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="9 9">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_eaefafe56ffb7220_result_py.html">src/eotransform/result.py</a></td>
+            <tr class="region">
+                <td class="name"><a href="z_eaefafe56ffb7220_result_py.html">src<span class="sep">/</span>eotransform<span class="sep">/</span>result.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="31 31">100%</td>
                 <td>31</td>
                 <td>0</td>
                 <td>7</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="4 4">100%</td>
                 <td>4</td>
                 <td>0</td>
-                <td class="right" data-ratio="35 35">100%</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="35 35">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_8f98a2a232c032e0_filtered_py.html">src/eotransform/sinks/filtered.py</a></td>
+            <tr class="region">
+                <td class="name"><a href="z_8f98a2a232c032e0_filtered_py.html">src<span class="sep">/</span>eotransform<span class="sep">/</span>sinks<span class="sep">/</span>filtered.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="9 9">100%</td>
                 <td>9</td>
                 <td>0</td>
                 <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="2 2">100%</td>
                 <td>2</td>
                 <td>0</td>
-                <td class="right" data-ratio="11 11">100%</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="11 11">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_8f98a2a232c032e0_result_py.html">src/eotransform/sinks/result.py</a></td>
+            <tr class="region">
+                <td class="name"><a href="z_8f98a2a232c032e0_result_py.html">src<span class="sep">/</span>eotransform<span class="sep">/</span>sinks<span class="sep">/</span>result.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="12 12">100%</td>
                 <td>12</td>
                 <td>0</td>
                 <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="2 2">100%</td>
                 <td>2</td>
                 <td>0</td>
-                <td class="right" data-ratio="14 14">100%</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="14 14">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_8f98a2a232c032e0_sink_to_progress_report_py.html">src/eotransform/sinks/sink_to_progress_report.py</a></td>
+            <tr class="region">
+                <td class="name"><a href="z_8f98a2a232c032e0_sink_to_progress_report_py.html">src<span class="sep">/</span>eotransform<span class="sep">/</span>sinks<span class="sep">/</span>sink_to_progress_report.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="11 13">85%</td>
                 <td>13</td>
                 <td>2</td>
                 <td>3</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
                 <td>0</td>
                 <td>0</td>
-                <td class="right" data-ratio="11 13">85%</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="11 13">85%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_8f98a2a232c032e0_with_performance_clock_py.html">src/eotransform/sinks/with_performance_clock.py</a></td>
+            <tr class="region">
+                <td class="name"><a href="z_8f98a2a232c032e0_with_performance_clock_py.html">src<span class="sep">/</span>eotransform<span class="sep">/</span>sinks<span class="sep">/</span>with_performance_clock.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="11 11">100%</td>
                 <td>11</td>
                 <td>0</td>
                 <td>0</td>
-                <td>2</td>
-                <td>1</td>
-                <td class="right" data-ratio="12 13">92%</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="11 11">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_eaefafe56ffb7220_streamed_process_py.html">src/eotransform/streamed_process.py</a></td>
+            <tr class="region">
+                <td class="name"><a href="z_eaefafe56ffb7220_streamed_process_py.html">src<span class="sep">/</span>eotransform<span class="sep">/</span>streamed_process.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="66 67">99%</td>
                 <td>67</td>
                 <td>1</td>
                 <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="16 16">100%</td>
                 <td>16</td>
                 <td>0</td>
-                <td class="right" data-ratio="82 83">99%</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="82 83">99%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_4c9af4ebf5f6f7fe_apply_to_enumeration_py.html">src/eotransform/transformers/apply_to_enumeration.py</a></td>
+            <tr class="region">
+                <td class="name"><a href="z_4c9af4ebf5f6f7fe_apply_to_enumeration_py.html">src<span class="sep">/</span>eotransform<span class="sep">/</span>transformers<span class="sep">/</span>apply_to_enumeration.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="12 12">100%</td>
                 <td>12</td>
                 <td>0</td>
                 <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="4 4">100%</td>
                 <td>4</td>
                 <td>0</td>
-                <td class="right" data-ratio="16 16">100%</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="16 16">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_4c9af4ebf5f6f7fe_chain_py.html">src/eotransform/transformers/chain.py</a></td>
+            <tr class="region">
+                <td class="name"><a href="z_4c9af4ebf5f6f7fe_chain_py.html">src<span class="sep">/</span>eotransform<span class="sep">/</span>transformers<span class="sep">/</span>chain.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="7 7">100%</td>
                 <td>7</td>
                 <td>0</td>
                 <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
                 <td>0</td>
                 <td>0</td>
-                <td class="right" data-ratio="7 7">100%</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="7 7">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_4c9af4ebf5f6f7fe_compose_py.html">src/eotransform/transformers/compose.py</a></td>
+            <tr class="region">
+                <td class="name"><a href="z_4c9af4ebf5f6f7fe_compose_py.html">src<span class="sep">/</span>eotransform<span class="sep">/</span>transformers<span class="sep">/</span>compose.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="11 11">100%</td>
                 <td>11</td>
                 <td>0</td>
                 <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="2 2">100%</td>
                 <td>2</td>
                 <td>0</td>
-                <td class="right" data-ratio="13 13">100%</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="13 13">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_4c9af4ebf5f6f7fe_identity_py.html">src/eotransform/transformers/identity.py</a></td>
+            <tr class="region">
+                <td class="name"><a href="z_4c9af4ebf5f6f7fe_identity_py.html">src<span class="sep">/</span>eotransform<span class="sep">/</span>transformers<span class="sep">/</span>identity.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="6 6">100%</td>
                 <td>6</td>
                 <td>0</td>
                 <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
                 <td>0</td>
                 <td>0</td>
-                <td class="right" data-ratio="6 6">100%</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="6 6">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_4c9af4ebf5f6f7fe_map_py.html">src/eotransform/transformers/map.py</a></td>
+            <tr class="region">
+                <td class="name"><a href="z_4c9af4ebf5f6f7fe_map_py.html">src<span class="sep">/</span>eotransform<span class="sep">/</span>transformers<span class="sep">/</span>map.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="9 9">100%</td>
                 <td>9</td>
                 <td>0</td>
                 <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
                 <td>0</td>
                 <td>0</td>
-                <td class="right" data-ratio="9 9">100%</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="9 9">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_4c9af4ebf5f6f7fe_repeat_py.html">src/eotransform/transformers/repeat.py</a></td>
+            <tr class="region">
+                <td class="name"><a href="z_4c9af4ebf5f6f7fe_repeat_py.html">src<span class="sep">/</span>eotransform<span class="sep">/</span>transformers<span class="sep">/</span>repeat.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="9 9">100%</td>
                 <td>9</td>
                 <td>0</td>
                 <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
                 <td>0</td>
                 <td>0</td>
-                <td class="right" data-ratio="9 9">100%</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="9 9">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_4c9af4ebf5f6f7fe_result_py.html">src/eotransform/transformers/result.py</a></td>
+            <tr class="region">
+                <td class="name"><a href="z_4c9af4ebf5f6f7fe_result_py.html">src<span class="sep">/</span>eotransform<span class="sep">/</span>transformers<span class="sep">/</span>result.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="18 18">100%</td>
                 <td>18</td>
                 <td>0</td>
                 <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="2 2">100%</td>
                 <td>2</td>
                 <td>0</td>
-                <td class="right" data-ratio="20 20">100%</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="20 20">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_4c9af4ebf5f6f7fe_send_to_stream_py.html">src/eotransform/transformers/send_to_stream.py</a></td>
+            <tr class="region">
+                <td class="name"><a href="z_4c9af4ebf5f6f7fe_send_to_stream_py.html">src<span class="sep">/</span>eotransform<span class="sep">/</span>transformers<span class="sep">/</span>send_to_stream.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="10 10">100%</td>
                 <td>10</td>
                 <td>0</td>
                 <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
                 <td>0</td>
                 <td>0</td>
-                <td class="right" data-ratio="10 10">100%</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="10 10">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_4c9af4ebf5f6f7fe_to_tuple_py.html">src/eotransform/transformers/to_tuple.py</a></td>
+            <tr class="region">
+                <td class="name"><a href="z_4c9af4ebf5f6f7fe_to_tuple_py.html">src<span class="sep">/</span>eotransform<span class="sep">/</span>transformers<span class="sep">/</span>to_tuple.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="6 6">100%</td>
                 <td>6</td>
                 <td>0</td>
                 <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
                 <td>0</td>
                 <td>0</td>
-                <td class="right" data-ratio="6 6">100%</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="6 6">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_4c9af4ebf5f6f7fe_with_performance_clock_py.html">src/eotransform/transformers/with_performance_clock.py</a></td>
+            <tr class="region">
+                <td class="name"><a href="z_4c9af4ebf5f6f7fe_with_performance_clock_py.html">src<span class="sep">/</span>eotransform<span class="sep">/</span>transformers<span class="sep">/</span>with_performance_clock.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="12 12">100%</td>
                 <td>12</td>
                 <td>0</td>
                 <td>0</td>
-                <td>2</td>
-                <td>1</td>
-                <td class="right" data-ratio="13 14">93%</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="0 0">100%</td>
+                <td>0</td>
+                <td>0</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="12 12">100%</td>
             </tr>
-            <tr class="file">
-                <td class="name left"><a href="d_e24c8e1f1d27717d_profiling_py.html">src/eotransform/utilities/profiling.py</a></td>
+            <tr class="region">
+                <td class="name"><a href="z_e24c8e1f1d27717d_profiling_py.html">src<span class="sep">/</span>eotransform<span class="sep">/</span>utilities<span class="sep">/</span>profiling.py</a></td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="57 58">98%</td>
                 <td>58</td>
                 <td>1</td>
                 <td>0</td>
-                <td>10</td>
-                <td>2</td>
-                <td class="right" data-ratio="65 68">96%</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="7 8">88%</td>
+                <td>8</td>
+                <td>1</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="64 66">97%</td>
             </tr>
         </tbody>
         <tfoot>
             <tr class="total">
-                <td class="name left">Total</td>
+                <td class="name">Total</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="343 347">99%</td>
                 <td>347</td>
                 <td>4</td>
                 <td>25</td>
-                <td>62</td>
-                <td>5</td>
-                <td class="right" data-ratio="400 409">98%</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="48 50">96%</td>
+                <td>50</td>
+                <td>2</td>
+                <td class="spacer">&nbsp;</td>
+                <td data-ratio="391 397">98%</td>
             </tr>
         </tfoot>
     </table>
@@ -302,16 +450,16 @@
 <footer>
     <div class="content">
         <p>
-            <a class="nav" href="https://coverage.readthedocs.io/en/7.2.7">coverage.py v7.2.7</a>,
-            created at 2023-06-04 09:29 +0000
+            <a class="nav" href="https://coverage.readthedocs.io/en/7.17.0">coverage.py v7.17.0</a>,
+            created at 2026-11-01 13:31 +0000
         </p>
     </div>
     <aside class="hidden">
-        <a id="prevFileLink" class="nav" href="d_e24c8e1f1d27717d_profiling_py.html"/>
-        <a id="nextFileLink" class="nav" href="d_eaefafe56ffb7220___init___py.html"/>
-        <button type="button" class="button_prev_file" data-shortcut="["/>
-        <button type="button" class="button_next_file" data-shortcut="]"/>
-        <button type="button" class="button_show_hide_help" data-shortcut="?"/>
+        <a id="prevFileLink" class="nav" href="z_e24c8e1f1d27717d_profiling_py.html"></a>
+        <a id="nextFileLink" class="nav" href="z_eaefafe56ffb7220___init___py.html"></a>
+        <button type="button" class="button_prev_file" data-shortcut="["></button>
+        <button type="button" class="button_next_file" data-shortcut="]"></button>
+        <button type="button" class="button_show_hide_help" data-shortcut="?"></button>
     </aside>
 </footer>
 </body>

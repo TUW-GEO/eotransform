@@ -7,7 +7,7 @@
 | src/eotransform/\_\_init\_\_.py                          |        1 |        0 |        0 |        0 |    100% |           |
 | src/eotransform/\_version.py                             |        1 |        0 |        0 |        0 |    100% |           |
 | src/eotransform/apply.py                                 |        9 |        0 |        0 |        0 |    100% |           |
-| src/eotransform/collection\_transformation.py            |       18 |        0 |       16 |        1 |     97% |  13->exit |
+| src/eotransform/collection\_transformation.py            |       18 |        0 |       10 |        1 |     96% | 13-\>exit |
 | src/eotransform/protocol/\_\_init\_\_.py                 |        0 |        0 |        0 |        0 |    100% |           |
 | src/eotransform/protocol/sink.py                         |        4 |        0 |        0 |        0 |    100% |           |
 | src/eotransform/protocol/stream.py                       |        4 |        0 |        0 |        0 |    100% |           |
@@ -17,7 +17,7 @@
 | src/eotransform/sinks/filtered.py                        |        9 |        0 |        2 |        0 |    100% |           |
 | src/eotransform/sinks/result.py                          |       12 |        0 |        2 |        0 |    100% |           |
 | src/eotransform/sinks/sink\_to\_progress\_report.py      |       13 |        2 |        0 |        0 |     85% |       6-7 |
-| src/eotransform/sinks/with\_performance\_clock.py        |       11 |        0 |        2 |        1 |     92% |  15->exit |
+| src/eotransform/sinks/with\_performance\_clock.py        |       11 |        0 |        0 |        0 |    100% |           |
 | src/eotransform/streamed\_process.py                     |       67 |        1 |       16 |        0 |     99% |        23 |
 | src/eotransform/transformers/\_\_init\_\_.py             |        0 |        0 |        0 |        0 |    100% |           |
 | src/eotransform/transformers/apply\_to\_enumeration.py   |       12 |        0 |        4 |        0 |    100% |           |
@@ -29,10 +29,10 @@
 | src/eotransform/transformers/result.py                   |       18 |        0 |        2 |        0 |    100% |           |
 | src/eotransform/transformers/send\_to\_stream.py         |       10 |        0 |        0 |        0 |    100% |           |
 | src/eotransform/transformers/to\_tuple.py                |        6 |        0 |        0 |        0 |    100% |           |
-| src/eotransform/transformers/with\_performance\_clock.py |       12 |        0 |        2 |        1 |     93% |  16->exit |
+| src/eotransform/transformers/with\_performance\_clock.py |       12 |        0 |        0 |        0 |    100% |           |
 | src/eotransform/utilities/\_\_init\_\_.py                |        0 |        0 |        0 |        0 |    100% |           |
-| src/eotransform/utilities/profiling.py                   |       58 |        1 |       10 |        2 |     96% |70, 72->75 |
-|                                                **TOTAL** |  **347** |    **4** |   **62** |    **5** | **98%** |           |
+| src/eotransform/utilities/profiling.py                   |       58 |        1 |        8 |        1 |     97% |        70 |
+| **TOTAL**                                                |  **347** |    **4** |   **50** |    **2** | **98%** |           |
 
 
 ## Setup coverage badge
